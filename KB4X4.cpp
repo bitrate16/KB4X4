@@ -70,6 +70,7 @@ int KB4X4::getKey() {
 	int key = -1;
 	
 	// R1
+	pinMode(R1, OUTPUT);
 	digitalWrite(R1, LOW);
 	if(digitalRead(C1) == LOW)// S1
 		key = 0;
@@ -80,10 +81,12 @@ int KB4X4::getKey() {
 	if(digitalRead(C4) == LOW)// S4
 		key = 3;
 	digitalWrite(R1, HIGH);
+	pinMode(R1, INPUT);
 	if(key != -1)
 		return key;
 	
 	// R2
+	pinMode(R2, OUTPUT);
 	digitalWrite(R2, LOW);
 	if(digitalRead(C1) == LOW)// S1
 		key = 4;
@@ -94,10 +97,12 @@ int KB4X4::getKey() {
 	if(digitalRead(C4) == LOW)// S4
 		key = 7;
 	digitalWrite(R2, HIGH);
+	pinMode(R2, INPUT);
 	if(key != -1)
 		return key;
 	
 	// R3
+	pinMode(R3, OUTPUT);
 	digitalWrite(R3, LOW);
 	if(digitalRead(C1) == LOW)// S1
 		key = 8;
@@ -108,10 +113,12 @@ int KB4X4::getKey() {
 	if(digitalRead(C4) == LOW)// S4
 		key = 11;
 	digitalWrite(R3, HIGH);
+	pinMode(R3, INPUT);
 	if(key != -1)
 		return key;
 	
 	// R4
+	pinMode(R4, OUTPUT);
 	digitalWrite(R4, LOW);
 	if(digitalRead(C1) == LOW)// S1
 		key = 12;
@@ -122,6 +129,7 @@ int KB4X4::getKey() {
 	if(digitalRead(C4) == LOW)// S4
 		key = 15;
 	digitalWrite(R4, HIGH);
+	pinMode(R4, INPUT);
 	if(key != -1)
 		return key;
 	
