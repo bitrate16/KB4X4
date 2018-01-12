@@ -5,4 +5,4 @@ Arduino 4x4 button pad (keypad) library.
  * **getKey()** returns current active key code
  * **getKeys()** returns current active keys bits
  
- [image](4x4-img.jpg)
+ ![image](4x4-img.jpg)
